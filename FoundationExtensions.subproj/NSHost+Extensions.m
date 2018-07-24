@@ -36,8 +36,9 @@
 {
     NSHost	*host;
 
-    if((host = [NSHost hostWithAddress:string]) == nil)
-        host = [NSHost hostWithName:string];
+   host = [NSHost hostWithAddress:string];
+   if( ! [host address])
+      host = [NSHost hostWithName:string];
 
     return host;
 }
