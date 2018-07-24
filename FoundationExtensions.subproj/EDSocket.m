@@ -91,7 +91,7 @@ Note that some socket related functionality is implemented in a category on NSFi
     int socketDesc;
 
     self = [super init];
-    if((socketDesc = socket([isa protocolFamily], [isa socketType], [isa socketProtocol])) < 0)
+    if((socketDesc = socket([EDObjcIsa protocolFamily], [EDObjcIsa socketType], [EDObjcIsa socketProtocol])) < 0)
         {
         [self release];
         [NSException raise:NSFileHandleOperationException format:@"Failed to create a socket: %s", strerror(ED_ERRNO)];
@@ -178,7 +178,7 @@ Note that some socket related functionality is implemented in a category on NSFi
 
 - (unsigned long long)offsetInFile
 {
-    [NSException raise:NSInternalInconsistencyException format:@"-[%@ %@]: Operation not allowed on sockets.", NSStringFromClass(isa), NSStringFromSelector(_cmd)];
+    [NSException raise:NSInternalInconsistencyException format:@"-[%@ %@]: Operation not allowed on sockets.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd)];
     return 0;// keep Compiler happy
 }
 

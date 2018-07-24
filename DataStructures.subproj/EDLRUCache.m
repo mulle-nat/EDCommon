@@ -85,8 +85,11 @@ This datastructure does not implement the copying and coding protocols as caches
                 keyForEarliestDate = key;
                 }
             }
-        [entries removeObjectForKey:keyForEarliestDate];
-        [timestamps removeObjectForKey:keyForEarliestDate];
+        if( keyForEarliestDate)
+            {
+            [entries removeObjectForKey:keyForEarliestDate];
+            [timestamps removeObjectForKey:keyForEarliestDate];
+            }
         }
 
     [entries setObject:newObject forKey:newKey];

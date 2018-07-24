@@ -601,7 +601,7 @@ static NSString *readquotedstring(unichar *charp, NSDictionary *entityTable, BOO
                 }
             else if(*charp == '>')
                 {
-                [NSException raise:EDMLParserException format:@"Syntax Error at pos. %d; found stray `>'.", (charp - source)];
+                [NSException raise:EDMLParserException format:@"Syntax Error at pos. %ld; found stray `>'.", (long) (charp - source)];
                 token = nil;  // keep compiler happy
                 }
             else if(EDBitmapCharsetContainsCharacter(spaceCharset, *charp))
@@ -622,7 +622,7 @@ static NSString *readquotedstring(unichar *charp, NSDictionary *entityTable, BOO
                 while(EDBitmapCharsetContainsCharacter(textCharset, *charp) || (ignoresEntities && (*charp == '&')))
                     charp = nextchar(charp, NO);
                 if(start == charp) // not at end and neither a text nor a switch char
-                    [NSException raise:EDMLParserException format:@"Found invalid character \\u%x at pos %d.", (int)*charp, (charp - source)];
+                    [NSException raise:EDMLParserException format:@"Found invalid character \\u%x at pos %ld.", (int)*charp, (long) (charp - source)];
                 token = [EDMLToken tokenWithType:EDMLPT_STRING];
                 [token setValue:[NSString stringWithCharacters:start length:(charp - start)]];
                 }
@@ -646,7 +646,7 @@ static NSString *readquotedstring(unichar *charp, NSDictionary *entityTable, BOO
                 charp = nextchar(charp, YES);
             if(*charp == '<')
                 {
-                [NSException raise:EDMLParserException format:@"Syntax Error at pos. %d; found `<' in a tag.", (charp - source)];
+                [NSException raise:EDMLParserException format:@"Syntax Error at pos. %ld; found `<' in a tag.", (long) (charp - source)];
                 token = nil;  // keep compiler happy
                 }
             else if(*charp == '>')
@@ -683,7 +683,7 @@ static NSString *readquotedstring(unichar *charp, NSDictionary *entityTable, BOO
                     while(EDBitmapCharsetContainsCharacter(attrStopCharset, *charp) == NO)
                         charp = nextchar(charp, YES);
                     if(charp == start)
-                        [NSException raise:EDMLParserException format:@"Syntax error at pos. %d; expected either `>' or a tag attribute/value. (Note that tag attribute values must be quoted if they contain anything other than alphanumeric characters.)", (charp - source)];
+                        [NSException raise:EDMLParserException format:@"Syntax error at pos. %ld; expected either `>' or a tag attribute/value. (Note that tag attribute values must be quoted if they contain anything other than alphanumeric characters.)", (long) (charp - source)];
                     if(*(charp - 1) == '/')
                         charp -= 1;
                     tvalue = [NSString stringWithCharacters:start length:(charp - start)];

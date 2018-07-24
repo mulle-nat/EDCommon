@@ -140,9 +140,9 @@
     rangeDescs = [NSMutableArray array];
     rangeEnum = [rangeArray objectEnumerator];
     while((range = [rangeEnum nextObject]) != nil)
-        [rangeDescs addObject:[NSString stringWithFormat:@"(%d..%d)", [range location], [range endLocation]]];
+        [rangeDescs addObject:[NSString stringWithFormat:@"(%ld..%ld)", (long) [range location], (long) [range endLocation]]];
 
-    return [NSString stringWithFormat: @"<%@ 0x%x: %@>", NSStringFromClass(isa), (void *)self, [rangeDescs componentsJoinedByString:@", "]];
+    return [NSString stringWithFormat: @"<%@ %p: %@>", NSStringFromClass(EDObjcIsa), (void *)self, [rangeDescs componentsJoinedByString:@", "]];
 }
 
 

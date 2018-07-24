@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AD39F29D05443F3D0086D411 /* EDCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CC70090839C7F000001 /* EDCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD39F29E05443F3D0086D411 /* EDCommonDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CC80090839C7F000001 /* EDCommonDefines.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		AD39F29E05443F3D0086D411 /* EDCommonDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CC80090839C7F000001 /* EDCommonDefines.h */; settings = {ATTRIBUTES = (Project, Public, ); }; };
 		AD39F29F05443F3D0086D411 /* EDObjcRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6AABC9025313F000C21B98 /* EDObjcRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2A005443F3D0086D411 /* osdep.h in Headers */ = {isa = PBXBuildFile; fileRef = 675AF6BA02DE26F800A8C007 /* osdep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2A105443F3D0086D411 /* NSArray+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE10090839C7F000001 /* NSArray+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD39F2A205443F3D0086D411 /* NSAttributedString+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE20090839C7F000001 /* NSAttributedString+Extensions.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		AD39F2A205443F3D0086D411 /* NSAttributedString+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE20090839C7F000001 /* NSAttributedString+Extensions.h */; settings = {ATTRIBUTES = (Project, Public, ); }; };
 		AD39F2A305443F3D0086D411 /* NSBundle+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 03FAC9CE03C74F2600A8C007 /* NSBundle+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2A405443F3D0086D411 /* NSData+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE30090839C7F000001 /* NSData+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2A505443F3D0086D411 /* NSDate+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE40090839C7F000001 /* NSDate+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,9 +20,9 @@
 		AD39F2A705443F3D0086D411 /* NSInvocation+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0128DC9E00C1A5FB7F000001 /* NSInvocation+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2A805443F3D0086D411 /* NSObject+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE60090839C7F000001 /* NSObject+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2A905443F3D0086D411 /* NSProcessInfo+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE70090839C7F000001 /* NSProcessInfo+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD39F2AA05443F3D0086D411 /* NSSet+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE80090839C7F000001 /* NSSet+Extensions.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		AD39F2AA05443F3D0086D411 /* NSSet+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE80090839C7F000001 /* NSSet+Extensions.h */; settings = {ATTRIBUTES = (Project, Public, ); }; };
 		AD39F2AB05443F3D0086D411 /* NSScanner+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CE90090839C7F000001 /* NSScanner+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD39F2AC05443F3D0086D411 /* NSString+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CEA0090839C7F000001 /* NSString+Extensions.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		AD39F2AC05443F3D0086D411 /* NSString+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34CEA0090839C7F000001 /* NSString+Extensions.h */; settings = {ATTRIBUTES = (Project, Public, ); }; };
 		AD39F2AD05443F3D0086D411 /* EDIPSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 6798784602DDFC7E00A8C007 /* EDIPSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2AE05443F3D0086D411 /* EDSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 6798784702DDFC7E00A8C007 /* EDSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2AF05443F3D0086D411 /* EDStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 6798784802DDFC7E00A8C007 /* EDStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,9 +48,9 @@
 		AD39F2C505443F3D0086D411 /* EDSortedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D080090839C7F000001 /* EDSortedArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2C605443F3D0086D411 /* EDSortedArray+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D090090839C7F000001 /* EDSortedArray+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2C705443F3D0086D411 /* EDSparseClusterArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D0A0090839C7F000001 /* EDSparseClusterArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD39F2C805443F3D0086D411 /* EDStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D0B0090839C7F000001 /* EDStack.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
-		AD39F2C905443F3D0086D411 /* EDStringScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D0C0090839C7F000001 /* EDStringScanner.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
-		AD39F2CA05443F3D0086D411 /* EDLightWeightLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D0D0090839C7F000001 /* EDLightWeightLock.h */; settings = {ATTRIBUTES = (Public, Project, ); }; };
+		AD39F2C805443F3D0086D411 /* EDStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D0B0090839C7F000001 /* EDStack.h */; settings = {ATTRIBUTES = (Project, Public, ); }; };
+		AD39F2C905443F3D0086D411 /* EDStringScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D0C0090839C7F000001 /* EDStringScanner.h */; settings = {ATTRIBUTES = (Project, Public, ); }; };
+		AD39F2CA05443F3D0086D411 /* EDLightWeightLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D0D0090839C7F000001 /* EDLightWeightLock.h */; settings = {ATTRIBUTES = (Project, Public, ); }; };
 		AD39F2D705443F3D0086D411 /* NSApplication+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D200090839C7F000001 /* NSApplication+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2D805443F3D0086D411 /* NSAttributedString+AppKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D210090839C7F000001 /* NSAttributedString+AppKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD39F2D905443F3D0086D411 /* NSMatrix+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA34D220090839C7F000001 /* NSMatrix+Extensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -700,6 +700,8 @@
 /* Begin PBXProject section */
 		1AA34CC40090839C7F000001 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 0389982108E6B74900CE2E52 /* Build configuration list for PBXProject "EDCommon" */;
 			compatibilityVersion = "Xcode 3.0";
 			developmentRegion = English;
@@ -929,10 +931,8 @@
 		0389982208E6B74900CE2E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = supported;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
@@ -941,10 +941,8 @@
 		0389982308E6B74900CE2E52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = supported;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
@@ -953,10 +951,8 @@
 		0389982508E6B74900CE2E52 /* Release (embedded) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = supported;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};

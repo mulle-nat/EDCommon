@@ -45,7 +45,7 @@ static NSComparisonResult compareAttributes(id object1, id object2, void *contex
 - (id)singleObject
 {
     if([self count] != 1)
-        [NSException raise:NSInternalInconsistencyException format:@"-[%@ %@]: Attempt to retrieve single object from an array that contains %d objects.", NSStringFromClass(isa), NSStringFromSelector(_cmd), [self count]];
+        [NSException raise:NSInternalInconsistencyException format:@"-[%@ %@]: Attempt to retrieve single object from an array that contains %ld objects.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), (long) [self count]];
     return [self objectAtIndex:0];
 }
 
@@ -263,7 +263,7 @@ static NSComparisonResult compareAttributes(id object1, id object2, void *contex
 
 + (NSArray *)librarySearchPaths
 {
-    static NSMutableArray *paths = nil;
+    static NSArray *paths = nil;
 
     if(paths == nil)
         {

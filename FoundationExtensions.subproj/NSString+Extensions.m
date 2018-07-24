@@ -247,7 +247,10 @@ static NSCharacterSet *iwsSet = nil;
     NSStringEncoding encoding;
 
     if((encoding = [NSString stringEncodingForMIMEEncoding:charsetName]) == 0)
-        return nil; // Behaviour has changed (2001/08/03).
+    {
+       [self release];
+       return nil; // Behaviour has changed (2001/08/03).
+    }
     return [self initWithData:buffer encoding:encoding];
 }
 

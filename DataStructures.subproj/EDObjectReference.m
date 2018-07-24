@@ -89,7 +89,7 @@
 {
     if(otherObject == nil)
         return NO;
-	else if((isa != ((EDObjectReference *)otherObject)->isa) && ([otherObject isKindOfClass:[EDObjectReference class]] == NO))
+	else if((EDObjcIsa != EDObjcGetIsa((EDObjectReference *)otherObject)) && ([otherObject isKindOfClass:[EDObjectReference class]] == NO))
         return NO;
 	return (self->referencedObject == ((EDObjectReference *)otherObject)->referencedObject);
 }

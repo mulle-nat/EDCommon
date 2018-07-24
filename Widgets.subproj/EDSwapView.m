@@ -262,7 +262,7 @@ The main advantage of EDSwapView are the instance variables and methods dealing 
 - (void)addView:(NSView *)aView atPoint:(NSPoint)point
 {
     if([views containsObject:aView])
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to add view <%@ 0x%x> more than once.", NSStringFromClass(isa), NSStringFromSelector(_cmd), [aView class], aView];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to add view <%@ %p> more than once.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), [aView class], aView];
     [views addObject:aView];
     [aView setFrameOrigin:point];
     [aView removeFromSuperview];
@@ -274,7 +274,7 @@ The main advantage of EDSwapView are the instance variables and methods dealing 
 - (void)removeView:(NSView *)aView
 {
     if([views containsObject:aView] == NO)
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to remove unknown view <%@ 0x%x>.", NSStringFromClass(isa), NSStringFromSelector(_cmd), [aView class], aView];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to remove unknown view <%@ %p>.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), [aView class], aView];
     if([self isShowingView:aView])
         [self hideView:aView];
     [views removeObject:aView];
@@ -326,7 +326,7 @@ The main advantage of EDSwapView are the instance variables and methods dealing 
 - (void)showView:(NSView *)aView
 {
     if([views containsObject:aView] == NO)
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to show unknown view <%@ 0x%x>.", NSStringFromClass(isa), NSStringFromSelector(_cmd), [aView class], aView];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to show unknown view <%@ %p>.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), [aView class], aView];
 
     if([visibleViews containsObject:aView])
         return;
@@ -350,7 +350,7 @@ The main advantage of EDSwapView are the instance variables and methods dealing 
 - (void)hideView:(NSView *)aView
 {
     if([views containsObject:aView] == NO)
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to hide unknown view <%@ 0x%x>.", NSStringFromClass(isa), NSStringFromSelector(_cmd), [aView class], aView];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to hide unknown view <%@ %p>.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), [aView class], aView];
 
     if([visibleViews containsObject:aView] == NO)
         return;
@@ -379,7 +379,7 @@ The main advantage of EDSwapView are the instance variables and methods dealing 
     BOOL	wasVisible = NO;
     
     if([views containsObject:aView] == NO)
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to switch to unknown view <%@ 0x%x>.", NSStringFromClass(isa), NSStringFromSelector(_cmd), [aView class], aView];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to switch to unknown view <%@ %p>.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), [aView class], aView];
 
     if([visibleViews containsObject:aView])
         {
@@ -431,7 +431,7 @@ The main advantage of EDSwapView are the instance variables and methods dealing 
    case 3: [self switchToView:view3]; break;
    case 4: [self switchToView:view4]; break;
    default:
-       [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to switch to invalid view #%d.", NSStringFromClass(isa), NSStringFromSelector(_cmd), viewnum];
+       [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to switch to invalid view #%d.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), viewnum];
        }
 }
 

@@ -608,7 +608,7 @@ This datastructure does not implement the copying and coding protocols as binary
 
     x = [self _nodeForObject:anObject];
     if(NIL(x) == YES)
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to retrieve successor for an object that is not in the tree.", NSStringFromClass(isa), NSStringFromSelector(_cmd)];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to retrieve successor for an object that is not in the tree.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd)];
 
     y = [self _successorForNode:x];
 
@@ -649,7 +649,7 @@ This datastructure does not implement the copying and coding protocols as binary
 - (id)objectAtIndex:(NSUInteger)index
 {
     if((NIL(rootNode) == YES) || (index >= ((EDRedBlackTreeNode *)rootNode)->f.size))
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Index (%d) is greater than number of objects in tree (%d)", NSStringFromClass(isa), NSStringFromSelector(_cmd), index, ((EDRedBlackTreeNode *)rootNode)->f.size];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Index (%ld) is greater than number of objects in tree (%ld)", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), (long) index, (long) ((EDRedBlackTreeNode *)rootNode)->f.size];
 
     return [self _nodeWithRank:index + 1]->object;
 }
@@ -738,7 +738,7 @@ Note that it is possible to have several objects that compare as equal in the tr
 
     z = [self _nodeForObject:anObject];
     if(NIL(z) == YES)
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to delete an object that is not in the tree.", NSStringFromClass(isa), NSStringFromSelector(_cmd)];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to delete an object that is not in the tree.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd)];
     z = [self _deleteNode:z];
     [self _deallocNode:z];
 }
@@ -751,7 +751,7 @@ Note that it is possible to have several objects that compare as equal in the tr
     EDRedBlackTreeNode *x;
     
     if((NIL(rootNode) == YES) || (index >= ((EDRedBlackTreeNode *)rootNode)->f.size))
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Index (%d) is greater than number of objects in tree (%d).", NSStringFromClass(isa), NSStringFromSelector(_cmd), index, ((EDRedBlackTreeNode *)rootNode)->f.size];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Index (%ld) is greater than number of objects in tree (%ld).", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), (long) index, (long) ((EDRedBlackTreeNode *)rootNode)->f.size];
 
     x =  [self _nodeWithRank:index + 1];
     [self _deleteNode:x];

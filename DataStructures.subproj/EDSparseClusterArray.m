@@ -90,7 +90,7 @@ typedef struct
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat: @"<%@ 0x%x: %@>", NSStringFromClass(isa), (void *)self, [self allObjects]];
+    return [NSString stringWithFormat: @"<%@ %p: %@>", NSStringFromClass(EDObjcIsa), (void *)self, [self allObjects]];
 }
 
 
@@ -127,7 +127,7 @@ This method raises an NSInvalidArgumentException if anObject is !{nil}."*/
     id			previousObject;
 
     if(anObject == nil)
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to insert *nil* at index %d.", NSStringFromClass(isa), NSStringFromSelector(_cmd), index];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to insert *nil* at index %ld.", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), (long) index];
     
     pnum = index / pageSize;
     eidx = index % pageSize;
@@ -160,7 +160,7 @@ This method raises an NSInvalidArgumentException if the slot was empty."*/
     eidx = index % pageSize;
 
     if(((page = NSMapGet(pageTable, (void *)pnum)) == NULL) || ((page->entries[eidx]) == nil))
-        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to remove an object that is not in the array (index %d).", NSStringFromClass(isa), NSStringFromSelector(_cmd), index];
+        [NSException raise:NSInvalidArgumentException format:@"-[%@ %@]: Attempt to remove an object that is not in the array (index %ld).", NSStringFromClass(EDObjcIsa), NSStringFromSelector(_cmd), (long) index];
 
     [page->entries[eidx] release];
     page->entries[eidx] = nil;

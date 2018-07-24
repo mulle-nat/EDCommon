@@ -138,7 +138,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat: @"<%@ 0x%x: (%d..%d)>", NSStringFromClass(isa), (void *)self, range.location, range.location + range.length - 1];
+    return [NSString stringWithFormat: @"<%@ %p: (%ld..%ld)>", NSStringFromClass(EDObjcIsa), (void *)self, (long) range.location, (long) (range.location + range.length - 1)];
 }
 
 
@@ -152,7 +152,7 @@
 {
     if(otherObject == nil)
         return NO;
-    else if((isa != ((EDRange *)otherObject)->isa) && ([otherObject isKindOfClass:[EDRange class]] == NO))
+    else if((EDObjcIsa != EDObjcGetIsa((EDRange *)otherObject)) && ([otherObject isKindOfClass:[EDRange class]] == NO))
         return NO;
     return NSEqualRanges(range, ((EDRange *)otherObject)->range);
 }

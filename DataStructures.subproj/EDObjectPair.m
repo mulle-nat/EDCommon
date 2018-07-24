@@ -149,7 +149,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat: @"<%@ 0x%x: (%@, %@)>", NSStringFromClass(isa), (void *)self, firstObject, secondObject];
+    return [NSString stringWithFormat: @"<%@ %p: (%@, %@)>", NSStringFromClass(EDObjcIsa), (void *)self, firstObject, secondObject];
 }
 
 
@@ -165,7 +165,7 @@
 
     if(otherObject == nil)
         return NO;
-    else if((isa != ((EDObjectPair *)otherObject)->isa) && ([otherObject isKindOfClass:[EDObjectPair class]] == NO))
+    else if((EDObjcIsa != EDObjcGetIsa((EDObjectPair *)otherObject)) && ([otherObject isKindOfClass:[EDObjectPair class]] == NO))
         return NO;
 
     otherFirstObject = ((EDObjectPair *)otherObject)->firstObject;

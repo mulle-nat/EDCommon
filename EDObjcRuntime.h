@@ -35,6 +35,8 @@
 #define EDObjcClassGetInstanceMethod class_getInstanceMethod
 #define EDObjcClassGetClassMethod class_getClassMethod
 #define EDObjcSelectorsAreEqual(sel1, sel2) ((sel1)) == ((sel2))
+#define EDObjcIsa             object_getClass( self)
+#define EDObjcGetIsa( obj)    object_getClass( (obj))
 
 #else /* GNU_RUNTIME */
 
@@ -49,5 +51,7 @@
 #define EDObjcClassGetInstanceMethod class_get_instance_method
 #define EDObjcClassGetClassMethod class_get_class_method
 #define EDObjcSelectorsAreEqual(sel1, sel2) sel_eq(((sel1)),((sel2)))
+#define EDObjcIsa             isa
+#define EDObjcGetIsa( obj)    (obj)->isa
 
 #endif
